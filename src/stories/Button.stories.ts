@@ -1,53 +1,121 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { Button } from "../components/ui/button";
 
-import { Button } from "./Button";
+import { action } from "@storybook/addon-actions";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-	title: "Example/Button",
+const meta: Meta<typeof Button> = {
+	title: "UI/Button",
 	component: Button,
+	tags: ["autodocs"],
 	parameters: {
-		// Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
 		layout: "centered",
 	},
-	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-	tags: ["autodocs"],
-	// More on argTypes: https://storybook.js.org/docs/api/argtypes
 	argTypes: {
-		backgroundColor: { control: "color" },
+		variant: {
+			control: "select",
+			description: "The variant of the button",
+			options: [
+				"default",
+				"destructive",
+				"outline",
+				"secondary",
+				"ghost",
+				"link",
+			],
+		},
+		size: {
+			control: "select",
+			description: "The size of the button",
+			options: ["default", "sm", "lg", "icon"],
+		},
+		disabled: {
+			control: "boolean",
+			description: "Whether the button is disabled",
+		},
+		onClick: {
+			action: "clicked",
+			description: "Function to call when the button is clicked",
+		},
+		children: {
+			control: "text",
+			description: "Content of the button",
+		},
+		className: {
+			control: "text",
+			description: "Additional Tailwind CSS classes for styling",
+		},
+		asChild: {
+			control: "boolean",
+			description: "Render as a child component (Slot)",
+		},
 	},
-	// Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-	args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
-
+};
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
 	args: {
-		primary: true,
-		label: "Button",
+		variant: "default",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Default button",
+		className: "shadow-lg",
+	},
+};
+
+export const Destructive: Story = {
+	args: {
+		variant: "destructive",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Destructive button",
+		className: "shadow-lg",
+	},
+};
+
+export const Outline: Story = {
+	args: {
+		variant: "outline",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Outline button",
+		className: "shadow-lg",
 	},
 };
 
 export const Secondary: Story = {
 	args: {
-		label: "Button",
+		variant: "secondary",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Secondary button",
+		className: "shadow-lg",
 	},
 };
 
-export const Large: Story = {
+export const Ghost: Story = {
 	args: {
-		size: "large",
-		label: "Button",
+		variant: "ghost",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Ghost button",
+		className: "shadow-lg",
 	},
 };
 
-export const Small: Story = {
+export const Link: Story = {
 	args: {
-		size: "small",
-		label: "Button",
+		variant: "link",
+		size: "sm",
+		disabled: false,
+		onClick: action("clicked"),
+		children: "Link button",
+		className: "shadow-lg",
 	},
 };

@@ -1,14 +1,15 @@
-import type { Preview } from '@storybook/react'
+import "../src/index.css"; // Import global styles
+import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
-      },
-    },
-  },
+	parameters: {
+		controls: {
+			matchers: {
+				color: /(background|color)$/i,
+				date: /Date$/i,
+			},
+		},
+	},
 };
 
 export default preview;
