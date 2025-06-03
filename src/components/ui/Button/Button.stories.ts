@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "./button";
 
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 
 const meta: Meta<typeof Button> = {
 	title: "Components/ui/Button",
@@ -26,7 +26,7 @@ const meta: Meta<typeof Button> = {
 		size: {
 			control: "select",
 			description: "The size of the button",
-			options: ["default", "sm", "lg", "icon", "undefined"],
+			options: ["default", "sm", "lg", "icon"],
 		},
 		disabled: {
 			control: "boolean",
@@ -42,7 +42,8 @@ const meta: Meta<typeof Button> = {
 		},
 		className: {
 			control: "text",
-			description: "Additional Tailwind CSS classes for styling",
+			description:
+				"Additional Tailwind CSS classes for styling the outer container. Internal styles like background color or spacing are not affected by this.",
 		},
 		asChild: {
 			control: "boolean",
@@ -52,7 +53,7 @@ const meta: Meta<typeof Button> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {

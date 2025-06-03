@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Input } from "./input";
 
 const meta: Meta<typeof Input> = {
@@ -28,13 +28,14 @@ const meta: Meta<typeof Input> = {
 		},
 		className: {
 			control: "text",
-			description: "Additional Tailwind CSS classes for styling",
+			description:
+				"Additional Tailwind CSS classes for styling the outer container. Internal styles like background color or spacing are not affected by this.",
 		},
 	},
 };
 export default meta;
 
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {
 		type: "email",

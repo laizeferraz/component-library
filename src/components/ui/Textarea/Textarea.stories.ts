@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Textarea } from "./textarea";
 
 const meta: Meta<typeof Textarea> = {
@@ -23,18 +23,19 @@ const meta: Meta<typeof Textarea> = {
 		},
 		className: {
 			control: "text",
-			description: "Additional Tailwind CSS classes for styling",
+			description:
+				"Additional Tailwind CSS classes for styling the outer container. Internal styles like background color or spacing are not affected by this.",
 		},
 	},
 };
 export default meta;
 
-type Story = StoryObj<typeof Textarea>;
+type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {
 		disabled: false,
 		value: "",
-		className: "border-purple-500",
+		className: "",
 		placeholder: "Type your message here...",
 	},
 };
