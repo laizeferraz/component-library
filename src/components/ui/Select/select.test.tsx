@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
 import * as SelectPrimitive from "@radix-ui/react-select";
+import { render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 import { SelectContent } from "./select";
 import "@testing-library/jest-dom/vitest";
 
