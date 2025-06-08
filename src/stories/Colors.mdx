@@ -4,24 +4,24 @@ import {lightTheme, darkTheme} from '../lib/colors';
 <Meta title="Colors" />
  
 <h2>Light Theme</h2>
-{Object.entries(lightTheme).map(([name, value]) => (
-  <ColorPalette key={name}>
+<ColorPalette key={name}>
+  {Object.entries(lightTheme).map(([name, value]) => (
   <ColorItem
     key={name}
     title={name}
     subtitle={value.description}
-    colors={{ [name]: value}}
+    colors={{ [`var(${name})`]: value }}
   />
-  </ColorPalette>
 ))}
+</ColorPalette>
 <h2>Dark Theme</h2>
+<ColorPalette key={name}>
 {Object.entries(darkTheme).map(([name, value]) => (
-  <ColorPalette key={name}>
   <ColorItem
     key={name}
     title={name}
     subtitle={value.description}
     colors={{ [name]: value}}
   />
-  </ColorPalette>
 ))}
+</ColorPalette>
