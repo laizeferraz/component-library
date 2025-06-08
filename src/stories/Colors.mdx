@@ -21,7 +21,7 @@ import {lightTheme, darkTheme} from '../lib/colors';
     key={name}
     title={name}
     subtitle={value.description}
-    colors={{ [name]: value}}
+    colors={{ [`var(${name})`]: value }}
   />
 ))}
 </ColorPalette>
