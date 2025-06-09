@@ -1,6 +1,6 @@
-import { describe, it, expect, vi } from "vitest";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import * as React from "react";
+import { describe, expect, it, vi } from "vitest";
 import { Switch } from "./switch";
 
 import "@testing-library/jest-dom/vitest";
