@@ -13,6 +13,7 @@ import {
 const meta: Meta<typeof DropdownMenu> = {
 	title: "Components/ui/DropdownMenu",
 	component: DropdownMenu,
+	subcomponents: { Button: Button as React.ComponentType<any> },
 	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",

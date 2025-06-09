@@ -13,17 +13,5 @@ const config: StorybookConfig = {
 		name: "@storybook/react-vite",
 		options: {},
 	},
-	viteFinal: (config) => {
-		config.resolve = config.resolve || {};
-		config.resolve.alias = [
-			...(Array.isArray(config.resolve.alias)
-				? config.resolve.alias
-				: config.resolve.alias
-					? [config.resolve.alias]
-					: []),
-			{ find: "@", replacement: path.resolve(__dirname, "../src") },
-		];
-		return config;
-	},
 };
 export default config;
