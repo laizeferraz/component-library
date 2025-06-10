@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button/button.tsx";
+import { Button } from "@/components/ui/button/button";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
 	DropdownMenu,
