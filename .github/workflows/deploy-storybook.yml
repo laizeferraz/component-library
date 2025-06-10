@@ -15,12 +15,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - run: npm ci
+          node-version: 22
+      - run: npm install
       - run: npm run build-storybook
-      - name: Add .nojekyll file to read underscore files 
-        run: cd storybook-static && touch .nojekyll
-        if: github.event_name != 'pull_request'
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
