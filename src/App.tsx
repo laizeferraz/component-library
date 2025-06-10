@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/ui/theme/theme-provider";
-import { Button } from "./components/ui/button/button";
+import { Button } from "./components/ui/Button/button";
 import { ModeToggle } from "./components/ui/theme/theme-button";
 
 function App() {
