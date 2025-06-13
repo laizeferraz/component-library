@@ -1,0 +1,8 @@
+import{j as i}from"./jsx-runtime-D_zvdyIk.js";import"./iframe-T9AkMdZV.js";import{c as d}from"./utils-bRKmu4jq.js";function o({className:s,...n}){return i.jsx("textarea",{"data-slot":"textarea",className:d("border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",s),...n})}o.__docgenInfo={description:"",methods:[],displayName:"Textarea"};const p={title:"Components/ui/Textarea",component:o,tags:["autodocs"],parameters:{layout:"centered"},argTypes:{disabled:{control:"boolean",description:"Whether the textarea is disabled"},onChange:{action:"changed",description:"Function to call when the textarea value changes"},value:{control:"text",description:"Value of the textarea"},className:{control:"text",description:"Additional Tailwind CSS classes for styling the outer container. Internal styles like background color or spacing are not affected by this."}}},e={args:{disabled:!1,value:"",className:"",placeholder:"Type your message here..."}};var a,t,r;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    disabled: false,
+    value: "",
+    className: "",
+    placeholder: "Type your message here..."
+  }
+}`,...(r=(t=e.parameters)==null?void 0:t.docs)==null?void 0:r.source}}};const m=["Default"];export{e as Default,m as __namedExportsOrder,p as default};
