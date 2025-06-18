@@ -1,0 +1,1 @@
+import{r as s,V as a}from"./iframe-7vTOIdNs.js";import{b as u}from"./index-DSQnSuie.js";var i=a[" useId ".trim().toString()]||(()=>{}),d=0;function f(r){const[t,e]=s.useState(i());return u(()=>{e(o=>o??String(d++))},[r]),t?`radix-${t}`:""}export{f as u};
