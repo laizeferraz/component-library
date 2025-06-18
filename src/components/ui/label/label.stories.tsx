@@ -6,6 +6,9 @@ const meta: Meta<typeof Label> = {
 	title: "Components/ui/Label",
 	component: Label,
 	tags: ["autodocs"],
+	parameters: {
+		layout: "centered",
+	},
 	argTypes: {
 		children: { control: "text" },
 	},

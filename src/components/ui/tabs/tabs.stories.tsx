@@ -26,7 +26,7 @@ type Story = StoryObj<typeof Tabs>;
 export const Default: Story = {
 	render: (args) => {
 		return (
-			<div className="flex w-full max-w-sm flex-col gap-6">
+			<div className="flex w-full min-w-sm flex-col gap-6">
 				<Tabs defaultValue="account" {...args}>
 					<TabsList>
 						<TabsTrigger value="account">Account</TabsTrigger>
